@@ -34,7 +34,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   // Root Endpoint
   // Displays a simple message to the user
   app.get( "/filteredimage/", async ( req, res ) => {
-    let {image_url} = req.query;
+  let image_url:string = req.query.image_url;
     if(!image_url){
         res.status(400).send('URL is requerd')   }
     try {
